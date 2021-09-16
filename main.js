@@ -2,6 +2,9 @@ $(document).ready(function() {
   const video = $('#webcam')[0];
   const overlay = $('#overlay')[0];
   const overlayCC = overlay.getContext('2d');
+  const txt1 = $('#txt1')[0];
+  txt1.value = "LOG"
+
   const ctrack = new clm.tracker();
   ctrack.init();
 
@@ -113,6 +116,7 @@ $(document).ready(function() {
   function captureExample(arrow_code) {
     // Take the latest image from the eyes canvas and add it to our dataset.
     if (arrow_code == 'L'){
+      txt1.value = 'L';
       console.log("L");
       arrow = -1;
     }
